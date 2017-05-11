@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'hello'
         junit(testResults: '*', allowEmptyResults: true, healthScaleFactor: 2)
+        checkstyle(pattern: '*')
       }
     }
   }
